@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Kind of Day</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box" id="heading">
+    <% if(kindofday == 'Saturday' || kindofday == 'Sunday'){ %>
+    <h1>It's a <%= kindofday %>!</h1>
+    <h2>Yay!! It's a weekend!!!</h2>
+   <% }else{ %>
+        <h1>It's a <%= kindofday %>!</h1>
+        <h2>You've to work.</h2>
+   <% } %>
+    </div>
+
+    <div class="box">
+    <% for(var i=0;i<kindoftask.length;i++){ %>
+    <div class="item">
+        <input type="checkbox">
+    <p><%= kindoftask[i] %></p>
+    </div>
+    <%}%>
+    </div>
+   <form action="/" method="post" class="item">
+    <input placeholder="Enter the task" name="task" type="text">
+    <button type="submit" name="button">+</button>
+   </form>
+</body>
+</html>
